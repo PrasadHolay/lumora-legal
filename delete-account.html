@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumora · Delete Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sage-dark:  #1E2D26;
+      --sage-mid:   #3A4D40;
+      --sage-light: #5A7A6A;
+      --sage-pale:  #E8F0EC;
+      --gold:       #C89525;
+      --gold-light: #F0D080;
+      --off-white:  #FEFDFB;
+      --charcoal:   #2C2C2C;
+      --mid-grey:   #6B6B6B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--charcoal);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(160deg, var(--sage-dark) 0%, var(--sage-mid) 60%, #4A6A5A 100%);
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(200, 149, 37, 0.08);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.12em;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    header h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.70);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--sage-dark);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .intro p {
+      font-size: 15px;
+      color: var(--mid-grey);
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Info boxes ── */
+    .info-card {
+      background: var(--sage-pale);
+      border-left: 3px solid var(--sage-light);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+
+    .info-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sage-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    .info-card ul {
+      list-style: none;
+      margin-top: 6px;
+    }
+
+    .info-card ul li {
+      font-size: 14px;
+      color: var(--charcoal);
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .info-card ul li::before {
+      content: '·';
+      position: absolute;
+      left: 4px;
+      color: var(--sage-light);
+      font-weight: 700;
+    }
+
+    /* ── Warning card ── */
+    .warning-card {
+      background: #FFF8EC;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+
+    .warning-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #7A5800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .warning-card p {
+      font-size: 14px;
+      color: #5A4000;
+      line-height: 1.6;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 36px 0;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--sage-pale);
+    }
+
+    .divider span {
+      font-size: 12px;
+      color: var(--mid-grey);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ── Steps ── */
+    .steps-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--sage-dark);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--sage-dark);
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--sage-dark);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 14px;
+      color: var(--mid-grey);
+      line-height: 1.6;
+    }
+
+    /* ── Email CTA ── */
+    .email-cta {
+      background: var(--sage-dark);
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+      margin: 36px 0;
+    }
+
+    .email-cta p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.70);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .email-cta a {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold) 0%, #E0A830 100%);
+      color: var(--sage-dark);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .email-cta a:hover { opacity: 0.88; }
+
+    .email-cta .email-address {
+      display: block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.50);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── In-app option ── */
+    .in-app {
+      background: #F5F5F3;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+
+    .in-app h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--sage-dark);
+      margin-bottom: 8px;
+    }
+
+    .in-app p {
+      font-size: 13px;
+      color: var(--mid-grey);
+      line-height: 1.6;
+    }
+
+    .path {
+      display: inline-block;
+      background: var(--sage-dark);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin: 6px 0;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--sage-dark);
+      padding: 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.60);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--gold-light); }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .wordmark { font-size: 30px; }
+      header h1 { font-size: 13px; }
+      main { padding: 36px 20px 48px; }
+      .intro h2 { font-size: 26px; }
+      .email-cta { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="wordmark">LUMORA</span>
+    <h1>Account Management</h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <h2>Request Account Deletion</h2>
+      <p>We're sorry to see you go. You can request deletion of your Lumora account and all associated data at any time.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>What will be deleted</h3>
+      <ul>
+        <li>Your account and login credentials</li>
+        <li>Skin analysis results and facial data</li>
+        <li>Personalisation quiz responses and preferences</li>
+        <li>Skincare and makeup recommendation history</li>
+        <li>Order history and cart data</li>
+        <li>Wishlist and saved products</li>
+        <li>Progress tracking data</li>
+      </ul>
+    </div>
+
+    <div class="warning-card">
+      <h3>Please note</h3>
+      <p>Account deletion is permanent and cannot be undone. Any active subscriptions should be cancelled before requesting deletion. We will process your request within <strong>30 days</strong>.</p>
+    </div>
+
+    <p class="steps-title">How to delete your account</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Delete directly in the app (fastest)</h4>
+        <p>Open Lumora and go to <span class="path">Profile → Settings → Delete Account</span>. This will immediately begin the deletion process.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Or send us an email request</h4>
+        <p>Email us with the subject line "Account Deletion Request" and include the email address associated with your Lumora account. We will confirm deletion within 30 days.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Confirmation</h4>
+        <p>You will receive an email confirmation once your account and all associated data has been permanently deleted.</p>
+      </div>
+    </div>
+
+    <div class="email-cta">
+      <p>Send your deletion request to our support team. Include the email address registered with your Lumora account.</p>
+      <a href="mailto:admin@lumorabeauty.co.uk?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20Lumora%20account.%20My%20registered%20email%20address%20is%3A%20">
+        Request Account Deletion
+      </a>
+      <span class="email-address">admin@lumorabeauty.co.uk</span>
+    </div>
+
+    <div class="in-app">
+      <h3>Cancel your subscription first</h3>
+      <p>If you have an active Lumora Premium subscription, please cancel it before requesting account deletion. You can manage your subscription via the App Store or Google Play.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2025 Lumora Beauty ·
+      <a href="https://prasadholay.github.io/bloom-verify/privacy-policy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
