@@ -3,501 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumora - Privacy Policy</title>
+    <title>Lumora — Privacy Policy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #FEFDFB;
+            --white: #FFFFFF;
+            --sage: #5A7A6A;
+            --gold: #C89525;
+            --coral: #993C1D;
+            --text-dark: #2D2D2D;
+            --text-body: #555555;
+            --text-muted: #888888;
+            --hairline: rgba(45, 45, 45, 0.08);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #FEFDFB;
-            color: #2D2D2D;
+            background: var(--bg);
+            color: var(--text-dark);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #8AAA9A 0%, #5A7A6A 50%, #4A6A5A 100%);
-            padding: 48px 24px 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            color: #fff;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .header p {
-            color: rgba(255,255,255,0.85);
-            font-size: 14px;
-            font-weight: 500;
         }
 
         .container {
             max-width: 720px;
             margin: 0 auto;
-            padding: 32px 24px 64px;
+            padding: 40px 22px 64px;
         }
 
-        .last-updated {
-            text-align: center;
-            color: #888;
-            font-size: 13px;
-            margin-bottom: 28px;
-        }
-
-        .summary-box {
-            background: rgba(90, 122, 106, 0.08);
-            border: 1px solid rgba(90, 122, 106, 0.2);
-            border-radius: 14px;
-            padding: 20px;
-            margin-bottom: 32px;
-        }
-
-        .summary-box h3 {
-            color: #5A7A6A;
-            font-size: 15px;
+        /* Editorial hero */
+        .hero { padding: 24px 0 6px; }
+        .eyebrow {
+            font-size: 11px;
             font-weight: 700;
-            margin-bottom: 12px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
         }
-
-        .summary-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .summary-item .check {
-            color: #2ecc71;
+        .hero h1 {
+            font-family: 'Cormorant', Georgia, serif;
             font-weight: 700;
-            font-size: 14px;
-            flex-shrink: 0;
+            font-size: 44px;
+            line-height: 1.05;
+            letter-spacing: -0.5px;
+            color: var(--text-dark);
         }
 
-        .summary-item p {
-            font-size: 13px;
-            color: #444;
-        }
-
-        .section {
-            background: #fff;
-            border-radius: 14px;
-            padding: 22px;
-            margin-bottom: 18px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        .section-title {
+        /* Gold ornament */
+        .ornament {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
+            opacity: 0.45;
+            margin: 22px 0 26px;
+        }
+        .ornament .line { width: 40px; height: 1px; background: var(--gold); }
+        .ornament .diamond { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+        /* Intro + summary cards */
+        .card {
+            background: var(--white);
+            border: 0.5px solid var(--hairline);
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 1px 4px rgba(45, 45, 45, 0.05);
+        }
+        .intro-text { font-size: 14px; color: var(--text-body); }
+
+        .summary h3 {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
             margin-bottom: 14px;
         }
+        .summary-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 9px; }
+        .summary-item:last-child { margin-bottom: 0; }
+        .summary-item .check { color: var(--sage); font-weight: 700; font-size: 14px; flex-shrink: 0; line-height: 1.5; }
+        .summary-item p { font-size: 13.5px; color: var(--text-body); }
 
-        .section-title .icon {
-            font-size: 18px;
-        }
-
-        .section-title h2 {
-            font-size: 16px;
+        /* Sections */
+        .section { padding: 26px 2px 4px; }
+        .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+        .section-num {
+            font-family: 'Cormorant', Georgia, serif;
             font-weight: 700;
-            color: #5A7A6A;
+            font-size: 30px;
+            line-height: 1;
+            letter-spacing: -0.5px;
+            color: var(--gold);
+            min-width: 38px;
         }
-
-        .section-content {
-            font-size: 14px;
-            color: #444;
-            line-height: 1.8;
-            white-space: pre-line;
+        .section-head h2 {
+            font-family: 'Cormorant', Georgia, serif;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: -0.3px;
+            color: var(--text-dark);
+            line-height: 1.15;
         }
+        .section-body { padding-left: 52px; }
+        .section-body p { font-size: 14px; color: var(--text-body); margin-bottom: 14px; }
+        .section-body p:last-child { margin-bottom: 0; }
 
-        .section-content strong {
-            display: block;
-            color: #2D2D2D;
-            font-weight: 600;
-            margin-top: 14px;
-            margin-bottom: 4px;
-            font-size: 13px;
+        .subsection { margin-top: 14px; }
+        .subsection .label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
             text-transform: uppercase;
-            letter-spacing: 0.3px;
+            color: var(--sage);
+            margin-bottom: 5px;
         }
+        .subsection .body { font-size: 14px; color: var(--text-body); }
 
-        .footer {
-            text-align: center;
-            padding: 32px 24px;
-            border-top: 1px solid #eee;
+        .note {
             margin-top: 16px;
+            font-size: 12.5px;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.6;
         }
 
-        .footer p {
+        .divider { height: 0.5px; background: var(--hairline); margin: 6px 0 0 52px; }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 0.5px solid var(--hairline);
+            text-align: center;
+        }
+        .footer .mark {
             font-size: 13px;
-            color: #888;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--sage);
+            margin-bottom: 10px;
         }
-
-        .footer a {
-            color: #5A7A6A;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .footer p { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+        .footer a { color: var(--sage); text-decoration: none; font-weight: 600; }
 
         @media (max-width: 480px) {
-            .header { padding: 36px 20px 32px; }
-            .header h1 { font-size: 24px; }
-            .container { padding: 24px 16px 48px; }
-            .section { padding: 18px; }
+            .container { padding: 28px 16px 48px; }
+            .hero h1 { font-size: 34px; }
+            .section-body, .divider { padding-left: 0; margin-left: 0; }
+            .section-head { gap: 10px; }
         }
     </style>
 </head>
 <body>
-
-<div class="header">
-    <h1>Lumora Privacy Policy</h1>
-    <p>Your privacy matters to us</p>
-</div>
-
 <div class="container">
-    <p class="last-updated">Last Updated: April 2026</p>
 
-    <div class="summary-box">
-        <h3>Quick Summary</h3>
-        <div class="summary-item">
-            <span class="check">✓</span>
-            <p>We collect data to provide personalised skincare and beauty recommendations</p>
+    <!-- Hero -->
+    <div class="hero">
+        <p class="eyebrow">Updated June 2026</p>
+        <h1>Your privacy,<br>our promise.</h1>
+    </div>
+
+    <div class="ornament"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- Intro -->
+    <div class="card">
+        <p class="intro-text">This policy explains how Lumora collects, uses, and protects your personal information. We never sell your data. You stay in control.</p>
+    </div>
+
+    <!-- Summary -->
+    <div class="card summary">
+        <h3>Quick summary</h3>
+        <div class="summary-item"><span class="check">✓</span><p>We collect data to personalise your skincare experience</p></div>
+        <div class="summary-item"><span class="check">✓</span><p>Your facial images are processed securely</p></div>
+        <div class="summary-item"><span class="check">✓</span><p>We never sell your data to third parties</p></div>
+        <div class="summary-item"><span class="check">✓</span><p>Delete your data anytime in Account Settings</p></div>
+    </div>
+
+    <!-- 01 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">01</span><h2>Introduction</h2></div>
+        <div class="section-body">
+            <p>Lumora Beauty (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is the data controller responsible for your personal data.</p>
+            <p>Lumorabeauty Ltd, trading as &ldquo;Lumora Beauty&rdquo;, is registered in England and Wales (company number 17044042). Our registered office is at 4 Field End, Coulsdon, CR5 2AY.</p>
+            <p>This Privacy Policy explains how we collect, use, store, and protect your information when you use our mobile application (&ldquo;the App&rdquo;), and the lawful basis we rely on for each use.</p>
+            <p>Where we rely on your consent &mdash; for example, facial analysis &mdash; you can withdraw it at any time. Using the App does not by itself mean you consent to all processing described here.</p>
         </div>
-        <div class="summary-item">
-            <span class="check">✓</span>
-            <p>Your facial images are processed by secure AI technology</p>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 02 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">02</span><h2>Information we collect</h2></div>
+        <div class="section-body">
+            <div class="subsection"><div class="label">Account information</div><div class="body">Email address (for account creation and communication), full name (for personalisation), and password (encrypted and securely stored).</div></div>
+            <div class="subsection"><div class="label">Profile &amp; quiz data</div><div class="body">Skin type (e.g. oily, dry, combination), skin concerns (e.g. acne, ageing, sensitivity), beauty preferences and goals, and product preferences.</div></div>
+            <div class="subsection"><div class="label">Facial analysis (special category data)</div><div class="body">Facial images, and the analysis derived from them, are special category data under Article 9 UK GDPR. We process them only with your explicit consent, given before any analysis and withdrawable at any time. This covers photographs you capture for skin analysis, AI-generated results (skin scores, detected concerns), and analysis history.</div></div>
+            <div class="subsection"><div class="label">Usage data</div><div class="body">App interactions and feature usage, device information (device type, operating system), and log data.</div></div>
+            <div class="subsection"><div class="label">Purchase, order &amp; payment data</div><div class="body">Products you view, save or purchase; order history and status; delivery address and contact details; and any photographs you submit with a return or complaint. Payments are processed by Stripe, so we receive confirmation and limited details, never your full card number.</div></div>
+            <div class="subsection"><div class="label">Marketing &amp; messaging data</div><div class="body">Marketing email preferences (opt-in) and unsubscribe status, push notification tokens and preferences, and subscription status via RevenueCat.</div></div>
         </div>
-        <div class="summary-item">
-            <span class="check">✓</span>
-            <p>We never sell your personal data to third parties</p>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 03 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">03</span><h2>How we use your information</h2></div>
+        <div class="section-body">
+            <p>The lawful basis we rely on under UK GDPR is: explicit consent for facial analysis and facial images (Article 9); performance of our contract for your account, recommendations, routines, orders, payments, delivery and returns; legal obligation for tax and accounting records; our legitimate interests for improving and securing the service; and your consent for marketing emails and push notifications, which you can withdraw at any time.</p>
+            <div class="subsection"><div class="label">Service delivery</div><div class="body">Provide personalised skincare recommendations, perform AI-powered skin analysis, store your beauty profile, and track your skincare journey.</div></div>
+            <div class="subsection"><div class="label">Improvement &amp; development</div><div class="body">Improve our AI algorithms and recommendation accuracy, develop new features, and analyse usage patterns to enhance the experience.</div></div>
+            <div class="subsection"><div class="label">Communication</div><div class="body">Send account-related notifications, respond to inquiries, and share product recommendations (with your consent).</div></div>
+            <div class="subsection"><div class="label">Legal &amp; safety</div><div class="body">Comply with legal obligations, protect against fraud and abuse, and enforce our Terms &amp; Conditions.</div></div>
         </div>
-        <div class="summary-item">
-            <span class="check">✓</span>
-            <p>You can delete your data at any time in Account Settings</p>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 04 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">04</span><h2>Third-party services</h2></div>
+        <div class="section-body">
+            <p>We use trusted third-party services to operate Lumora. They process your data under written data processing agreements; facial images are transmitted securely and used only to provide the features you request.</p>
+            <div class="subsection"><div class="label">AI &amp; analysis</div><div class="body">Perfect Corp (YouCam) for facial skin analysis, OpenAI for AI-generated skincare advice, and Visage Technologies (Arbelle) for augmented-reality virtual try-on.</div></div>
+            <div class="subsection"><div class="label">Payments, subscriptions &amp; fulfilment</div><div class="body">Stripe for payment processing, RevenueCat for subscription management, and Beauty Fort for supplier fulfilment and delivery of your order.</div></div>
+            <div class="subsection"><div class="label">Database &amp; authentication</div><div class="body">Supabase provides our secure cloud database and authentication services.</div></div>
+            <div class="subsection"><div class="label">Analytics</div><div class="body">Google Firebase provides usage analytics and crash reporting to improve app performance.</div></div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 05 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">05</span><h2>Data storage &amp; security</h2></div>
+        <div class="section-body">
+            <div class="subsection"><div class="label">Storage</div><div class="body">Your data is stored on secure cloud servers. Facial images are stored to provide analysis history (you can delete these anytime). Account data is retained while your account is active.</div></div>
+            <div class="subsection"><div class="label">Security measures</div><div class="body">Industry-standard encryption for data transmission (TLS/SSL), secure password hashing, access controls, and regular security audits.</div></div>
+            <div class="subsection"><div class="label">Data retention</div><div class="body">Account data is retained until you delete your account. Analysis history is retained until you delete it or your account. Usage logs are retained for up to 12 months.</div></div>
+            <p class="note">While we implement robust security measures, no method of transmission over the internet is 100% secure.</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 06 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">06</span><h2>Your rights (GDPR)</h2></div>
+        <div class="section-body">
+            <p>If you are in the UK or European Economic Area, you have the following rights under GDPR:</p>
+            <div class="subsection"><div class="label">Right to access</div><div class="body">Request a copy of your personal data.</div></div>
+            <div class="subsection"><div class="label">Right to rectification</div><div class="body">Request correction of inaccurate data.</div></div>
+            <div class="subsection"><div class="label">Right to erasure</div><div class="body">Request deletion of your personal data. You can delete your account in Account Settings.</div></div>
+            <div class="subsection"><div class="label">Right to restrict processing</div><div class="body">Request limitation of how we use your data.</div></div>
+            <div class="subsection"><div class="label">Right to data portability</div><div class="body">Request your data in a portable format.</div></div>
+            <div class="subsection"><div class="label">Right to object</div><div class="body">Object to processing based on legitimate interests.</div></div>
+            <div class="subsection"><div class="label">Right to withdraw consent</div><div class="body">Withdraw consent at any time for consent-based processing.</div></div>
+            <div class="subsection"><div class="label">Automated decisions &amp; profiling</div><div class="body">Our skin analysis and recommendations use automated processing and profiling to personalise your results. You can ask a person to review any result, and you can object to this profiling at any time.</div></div>
+            <div class="subsection"><div class="label">Right to complain</div><div class="body">Complain to us directly (see the next section), or to the Information Commissioner&rsquo;s Office (ICO) at ico.org.uk.</div></div>
+            <p class="note">To exercise any of these rights, contact us at info@lumorabeauty.co.uk. We will acknowledge your request within 30 days.</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 07 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">07</span><h2>Raising a data protection complaint</h2></div>
+        <div class="section-body">
+            <p>If you have a concern about how we handle your personal data, you can raise it directly with us. Email info@lumorabeauty.co.uk with the details, including the email address on your account so we can find your records.</p>
+            <p>We acknowledge every complaint within 30 days, investigate without undue delay, keep you updated, and tell you the outcome. If you are not satisfied with our response, you can complain to the Information Commissioner&rsquo;s Office (ICO), the UK&rsquo;s data protection regulator, at ico.org.uk.</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 08 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">08</span><h2>Cookies &amp; tracking</h2></div>
+        <div class="section-body">
+            <p>The Lumora mobile app does not use traditional browser cookies. We may use similar technologies for maintaining your logged-in session, storing your preferences locally on your device, and analytics. You can clear local app data through your device settings.</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 09 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">09</span><h2>Children&rsquo;s privacy</h2></div>
+        <div class="section-body">
+            <p>Lumora is not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+            <p>If we discover we have collected information from a child under 18, we will delete it promptly.</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 10 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">10</span><h2>International data transfers</h2></div>
+        <div class="section-body">
+            <p>Some of our providers process data outside the UK. Where that happens, we put appropriate safeguards in place so your data remains protected to UK standards: the UK International Data Transfer Agreement (IDTA) or the UK Addendum to the EU Standard Contractual Clauses; the UK Extension to the EU-US Data Privacy Framework (the UK-US Data Bridge) where a provider is certified; and data processing agreements with each provider.</p>
+            <p>We do not rely on your consent for these transfers; we rely on the safeguards above.</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 11 -->
+    <div class="section">
+        <div class="section-head"><span class="section-num">11</span><h2>Changes to this policy</h2></div>
+        <div class="section-body">
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you via the updated date at the top of this policy, in-app notification for significant changes, and email notification for material changes (if you have opted in).</p>
+            <p>Your continued use of the App after changes constitutes acceptance of the updated Privacy Policy.</p>
         </div>
     </div>
 
-    <!-- Section 1 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🌸</span>
-            <h2>1. Introduction</h2>
-        </div>
-        <div class="section-content">Welcome to Lumora ("we", "our", or "us"). We are committed to protecting your privacy and personal data.
-
-This Privacy Policy explains how we collect, use, store, and protect your information when you use our mobile application ("the App").
-
-Lumora is operated by Prasad Holay, based in the United Kingdom.
-
-By using Lumora, you consent to the practices described in this Privacy Policy.</div>
-    </div>
-
-    <!-- Section 2 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">📋</span>
-            <h2>2. Information We Collect</h2>
-        </div>
-        <div class="section-content">We collect the following types of information:
-
-<strong>Account Information</strong>
-• Email address (for account creation and communication)
-• Full name (for personalisation)
-• Password (encrypted and securely stored)
-
-<strong>Profile &amp; Quiz Data</strong>
-• Skin type (e.g., oily, dry, combination)
-• Skin concerns (e.g., acne, ageing, sensitivity)
-• Beauty preferences and goals
-• Product preferences
-
-<strong>Facial Analysis Data</strong>
-• Photographs you upload for skin analysis
-• AI-generated analysis results (skin scores, detected concerns)
-• Analysis history
-
-<strong>Usage Data</strong>
-• App interactions and feature usage
-• Device information (device type, operating system)
-• Log data and analytics
-
-<strong>Purchase &amp; Order Data</strong>
-• Products you view, save, or add to your bag
-• Order history and delivery addresses
-• Payment method type (we do not store card numbers)
-• Promo code usage</div>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🎯</span>
-            <h2>3. How We Use Your Information</h2>
-        </div>
-        <div class="section-content">We use your information for the following purposes:
-
-<strong>Service Delivery</strong>
-• Provide personalised skincare and makeup recommendations
-• Perform AI-powered skin analysis
-• Process and fulfil orders
-• Store your beauty profile and preferences
-• Track your skincare journey and progress
-
-<strong>Improvement &amp; Development</strong>
-• Improve our AI algorithms and recommendation accuracy
-• Develop new features and services
-• Analyse usage patterns to enhance user experience
-
-<strong>Communication</strong>
-• Send order confirmations and delivery updates
-• Send account-related notifications
-• Respond to your enquiries and support requests
-
-<strong>Legal &amp; Safety</strong>
-• Comply with legal obligations
-• Protect against fraud and abuse
-• Enforce our Terms &amp; Conditions</div>
-    </div>
-
-    <!-- Section 4 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🔗</span>
-            <h2>4. Third-Party Services</h2>
-        </div>
-        <div class="section-content">We use trusted third-party services to operate Lumora:
-
-<strong>AI &amp; Analysis Providers</strong>
-• Facial analysis technology for skin assessment
-• AR (augmented reality) technology for virtual makeup try-on
-• AI language models for personalised product descriptions
-
-These providers process data according to their own privacy policies. Images are transmitted securely and used solely for analysis purposes.
-
-<strong>Database &amp; Authentication</strong>
-• Secure cloud database for data storage (Supabase)
-• Authentication services for account management
-
-<strong>Analytics &amp; Error Reporting</strong>
-• Firebase for analytics and crash reporting
-• Usage analytics to improve app performance
-
-<strong>Subscription Management</strong>
-• RevenueCat for managing in-app subscriptions and purchase verification
-• RevenueCat receives your device ID and purchase history to verify and manage your Premium subscription
-• RevenueCat processes data in accordance with their privacy policy at revenuecat.com/privacy
-            
-<strong>Payment Processing</strong>
-• Payment processing is handled by secure third-party providers
-• We do not store your full card details
-
-We carefully select partners who maintain high privacy and security standards.</div>
-    </div>
-
-    <!-- Section 5 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🔒</span>
-            <h2>5. Data Storage &amp; Security</h2>
-        </div>
-        <div class="section-content"><strong>Storage</strong>
-• Your data is stored on secure cloud servers
-• Facial images are stored to provide analysis history (you can delete these at any time)
-• Order data is retained for legal and accounting purposes
-• Account data is retained while your account is active
-
-<strong>Security Measures</strong>
-• Industry-standard encryption for data transmission (TLS/SSL)
-• Secure password hashing
-• Row-level security on database tables
-• Access controls and authentication
-• Regular security reviews
-
-<strong>Data Retention</strong>
-• Account data: Retained until you delete your account
-• Analysis history: Retained until you delete it or your account
-• Order history: Retained for 7 years for legal compliance
-• Usage logs: Retained for up to 12 months
-
-While we implement robust security measures, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</div>
-    </div>
-
-    <!-- Section 6 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">⚖️</span>
-            <h2>6. Your Rights (UK GDPR)</h2>
-        </div>
-        <div class="section-content">Under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, you have the following rights:
-
-<strong>Right to Access</strong>
-• Request a copy of your personal data
-
-<strong>Right to Rectification</strong>
-• Request correction of inaccurate data
-
-<strong>Right to Erasure ("Right to be Forgotten")</strong>
-• Request deletion of your personal data
-• You can delete your account in Account Settings
-
-<strong>Right to Restrict Processing</strong>
-• Request limitation of how we use your data
-
-<strong>Right to Data Portability</strong>
-• Request your data in a portable format
-
-<strong>Right to Object</strong>
-• Object to processing based on legitimate interests
-
-<strong>Right to Withdraw Consent</strong>
-• Withdraw consent at any time for consent-based processing
-
-To exercise these rights, contact us at admin@lumorabeauty.co.uk. We will respond within 30 days.</div>
-    </div>
-
-    <!-- Section 7 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">📷</span>
-            <h2>7. Camera &amp; Photo Permissions</h2>
-        </div>
-        <div class="section-content">Lumora requests camera access for the following features:
-
-<strong>AI Skin Analysis</strong>
-• To capture a selfie for AI-powered skin assessment
-• Images are sent securely to our analysis provider and stored in your account
-
-<strong>Virtual Try-On</strong>
-• To provide real-time AR makeup try-on using your device camera
-• Camera feed is processed on-device; no video is stored or transmitted
-
-<strong>Photo Library</strong>
-• To save virtual try-on looks to your device
-• To upload existing photos for skin analysis
-
-You can revoke camera permissions at any time through your device settings. Some features will be unavailable without camera access.</div>
-    </div>
-
-    <!-- Section 8 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🍪</span>
-            <h2>8. Cookies &amp; Tracking</h2>
-        </div>
-        <div class="section-content">The Lumora mobile app does not use traditional browser cookies.
-
-We may use similar technologies for:
-• Maintaining your logged-in session
-• Storing your preferences locally on your device
-• Analytics and performance monitoring
-
-You can clear local app data through your device settings.</div>
-    </div>
-
-    <!-- Section 9 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">👶</span>
-            <h2>9. Children's Privacy</h2>
-        </div>
-        <div class="section-content">Lumora is not intended for children under 16 years of age.
-
-We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.
-
-If we discover we have collected information from a child under 16, we will delete it promptly.</div>
-    </div>
-
-    <!-- Section 10 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🌐</span>
-            <h2>10. International Data Transfers</h2>
-        </div>
-        <div class="section-content">Your data may be processed in countries outside the United Kingdom, including countries that may have different data protection laws.
-
-When we transfer data internationally, we ensure appropriate safeguards are in place:
-• Standard contractual clauses
-• Data processing agreements with third parties
-• Compliance with UK GDPR and applicable data protection regulations
-
-By using Lumora, you consent to the transfer of your information to these countries.</div>
-    </div>
-
-    <!-- Section 11 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">🛒</span>
-            <h2>11. Orders &amp; Returns</h2>
-        </div>
-        <div class="section-content">When you place an order through Lumora:
-
-<strong>Order Data</strong>
-• We collect your delivery address, contact details, and order preferences
-• Order data is stored securely and used to fulfil your purchase
-• Address data can be saved for future orders (optional)
-
-<strong>Returns</strong>
-• Returns are accepted within 14 days of delivery, in accordance with the UK Consumer Rights Act 2015
-• Contact admin@lumorabeauty.co.uk to arrange a return
-• Refunds are processed to your original payment method
-
-<strong>Payment</strong>
-• Payment is processed securely by third-party payment providers
-• We do not store your full credit or debit card details
-• Transaction records are retained for accounting and legal purposes</div>
-    </div>
-
-    <!-- Section 12 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">📝</span>
-            <h2>12. Changes to This Policy</h2>
-        </div>
-        <div class="section-content">We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements.
-
-<strong>How We Notify You</strong>
-• Updated "Last Updated" date at the top of this policy
-• In-app notification for significant changes
-• Email notification for material changes (if you have opted in)
-
-We encourage you to review this Privacy Policy periodically.
-
-Your continued use of the App after changes constitutes acceptance of the updated Privacy Policy.</div>
-    </div>
-
-    <!-- Section 13 -->
-    <div class="section">
-        <div class="section-title">
-            <span class="icon">📧</span>
-            <h2>13. Contact Us</h2>
-        </div>
-        <div class="section-content">If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:
-
-Email: admin@lumorabeauty.co.uk
-
-<strong>Data Protection Enquiries</strong>
-For data protection specific enquiries or to exercise your UK GDPR rights:
-Email: admin@lumorabeauty.co.uk
-Subject: Data Protection Request
-
-We aim to respond to all enquiries within 48 hours and data protection requests within 30 days.
-
-You also have the right to lodge a complaint with the Information Commissioner's Office (ICO):
-Website: https://ico.org.uk
-Phone: 0303 123 1113</div>
+    <!-- Footer -->
+    <div class="footer">
+        <p class="mark">LUMORA</p>
+        <p>Lumorabeauty Ltd, registered in England &amp; Wales (No. 17044042)<br>
+        Registered office: 4 Field End, Coulsdon, CR5 2AY</p>
+        <p style="margin-top: 10px;"><a href="mailto:info@lumorabeauty.co.uk">info@lumorabeauty.co.uk</a> &middot; ICO: ico.org.uk &middot; 0303 123 1113</p>
+        <p style="margin-top: 10px;">&copy; 2026 Lumora. All rights reserved.</p>
     </div>
 
 </div>
-
-<div class="footer">
-    <p>© 2026 Lumora. All rights reserved.</p>
-    <p style="margin-top: 8px;"><a href="mailto:admin@lumorabeauty.co.uk">admin@lumorabeauty.co.uk</a></p>
-</div>
-
 </body>
 </html>
