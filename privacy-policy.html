@@ -205,6 +205,7 @@
             <div class="subsection"><div class="label">Account information</div><div class="body">Email address (for account creation and communication), full name (for personalisation), and password (encrypted and securely stored).</div></div>
             <div class="subsection"><div class="label">Profile &amp; quiz data</div><div class="body">Skin type (e.g. oily, dry, combination), skin concerns (e.g. acne, ageing, sensitivity), beauty preferences and goals, and product preferences.</div></div>
             <div class="subsection"><div class="label">Facial analysis (special category data)</div><div class="body">Facial images, and the analysis derived from them, are special category data under Article 9 UK GDPR. We process them only with your explicit consent, given before any analysis and withdrawable at any time. This covers photographs you capture for skin analysis, AI-generated results (skin scores, detected concerns), and analysis history.</div></div>
+            <div class="subsection"><div class="label">Skin tone (shade matching)</div><div class="body">When you use shade matching, the photo you take is used only to read your skin-tone shade (a colour value). We do not store this photo &mdash; only the resulting shade value is saved, so we can personalise product matches for you.</div></div>
             <div class="subsection"><div class="label">Usage data</div><div class="body">App interactions and feature usage, device information (device type, operating system), and log data.</div></div>
             <div class="subsection"><div class="label">Purchase, order &amp; payment data</div><div class="body">Products you view, save or purchase; order history and status; delivery address and contact details; and any photographs you submit with a return or complaint. Payments are processed by Stripe, so we receive confirmation and limited details, never your full card number.</div></div>
             <div class="subsection"><div class="label">Marketing &amp; messaging data</div><div class="body">Marketing email preferences (opt-in) and unsubscribe status, push notification tokens and preferences, and subscription status via RevenueCat.</div></div>
@@ -217,6 +218,7 @@
         <div class="section-head"><span class="section-num">03</span><h2>How we use your information</h2></div>
         <div class="section-body">
             <p>The lawful basis we rely on under UK GDPR is: explicit consent for facial analysis and facial images (Article 9); performance of our contract for your account, recommendations, routines, orders, payments, delivery and returns; legal obligation for tax and accounting records; our legitimate interests for improving and securing the service; and your consent for marketing emails and push notifications, which you can withdraw at any time.</p>
+            <p>Providing your account and order details is necessary to create an account and fulfil your orders &mdash; without them we cannot provide those parts of the service. Facial analysis and marketing are optional and based on your consent.</p>
             <div class="subsection"><div class="label">Service delivery</div><div class="body">Provide personalised skincare recommendations, perform AI-powered skin analysis, store your beauty profile, and track your skincare journey.</div></div>
             <div class="subsection"><div class="label">Improvement &amp; development</div><div class="body">Improve our AI algorithms and recommendation accuracy, develop new features, and analyse usage patterns to enhance the experience.</div></div>
             <div class="subsection"><div class="label">Communication</div><div class="body">Send account-related notifications, respond to inquiries, and share product recommendations (with your consent).</div></div>
@@ -229,8 +231,8 @@
     <div class="section">
         <div class="section-head"><span class="section-num">04</span><h2>Third-party services</h2></div>
         <div class="section-body">
-            <p>We use trusted third-party services to operate Lumora. They process your data under written data processing agreements; facial images are transmitted securely and used only to provide the features you request.</p>
-            <div class="subsection"><div class="label">AI &amp; analysis</div><div class="body">Perfect Corp (YouCam) for facial skin analysis, OpenAI for AI-generated skincare advice, and Visage Technologies (Arbelle) for augmented-reality virtual try-on.</div></div>
+            <p>We use trusted third-party services to operate Lumora. Where a provider processes personal data on our behalf, we put a written data processing agreement in place, and they may use your data only to provide the service we have asked them to.</p>
+            <div class="subsection"><div class="label">AI &amp; analysis</div><div class="body">Perfect Corp (YouCam) carries out your facial skin analysis. Your photograph is sent to Perfect Corp securely, used only to generate your results, and deleted from their servers shortly afterwards (uploaded images within a day). OpenAI generates written skincare advice from your analysis results, not your photograph. Visage Technologies (Arbelle) powers virtual try-on entirely on your device, so those images are processed locally and are not sent to Visage.</div></div>
             <div class="subsection"><div class="label">Payments, subscriptions &amp; fulfilment</div><div class="body">Stripe for payment processing, RevenueCat for subscription management, and Beauty Fort for supplier fulfilment and delivery of your order.</div></div>
             <div class="subsection"><div class="label">Database &amp; authentication</div><div class="body">Supabase provides our secure cloud database and authentication services.</div></div>
             <div class="subsection"><div class="label">Analytics</div><div class="body">Google Firebase provides usage analytics and crash reporting to improve app performance.</div></div>
@@ -242,9 +244,9 @@
     <div class="section">
         <div class="section-head"><span class="section-num">05</span><h2>Data storage &amp; security</h2></div>
         <div class="section-body">
-            <div class="subsection"><div class="label">Storage</div><div class="body">Your data is stored on secure cloud servers. Facial images are stored to provide analysis history (you can delete these anytime). Account data is retained while your account is active.</div></div>
+            <div class="subsection"><div class="label">Storage</div><div class="body">Your data is stored on secure cloud servers. With your consent, we keep your facial images and results so you can compare your skin over time; the photo you take for shade matching is not stored &mdash; we keep only the resulting shade value. Our analysis provider deletes its own copy of any image shortly after processing.</div></div>
             <div class="subsection"><div class="label">Security measures</div><div class="body">Industry-standard encryption for data transmission (TLS/SSL), secure password hashing, access controls, and regular security audits.</div></div>
-            <div class="subsection"><div class="label">Data retention</div><div class="body">Account data is retained until you delete your account. Analysis history is retained until you delete it or your account. Usage logs are retained for up to 12 months.</div></div>
+            <div class="subsection"><div class="label">Data retention</div><div class="body">Account data is retained until you delete your account. Your facial analysis and skin-tone data are kept until you delete them or your account. You can delete this data at any time in Account Settings, or by emailing info@lumorabeauty.co.uk. Usage logs are retained for up to 12 months.</div></div>
             <p class="note">While we implement robust security measures, no method of transmission over the internet is 100% secure.</p>
         </div>
     </div>
@@ -257,7 +259,7 @@
             <p>If you are in the UK or European Economic Area, you have the following rights under GDPR:</p>
             <div class="subsection"><div class="label">Right to access</div><div class="body">Request a copy of your personal data.</div></div>
             <div class="subsection"><div class="label">Right to rectification</div><div class="body">Request correction of inaccurate data.</div></div>
-            <div class="subsection"><div class="label">Right to erasure</div><div class="body">Request deletion of your personal data. You can delete your account in Account Settings.</div></div>
+            <div class="subsection"><div class="label">Right to erasure</div><div class="body">Request deletion of your personal data. You can delete your account, and your facial and skin-tone data, in Account Settings, or by emailing info@lumorabeauty.co.uk.</div></div>
             <div class="subsection"><div class="label">Right to restrict processing</div><div class="body">Request limitation of how we use your data.</div></div>
             <div class="subsection"><div class="label">Right to data portability</div><div class="body">Request your data in a portable format.</div></div>
             <div class="subsection"><div class="label">Right to object</div><div class="body">Object to processing based on legitimate interests.</div></div>
